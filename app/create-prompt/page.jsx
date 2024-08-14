@@ -27,7 +27,7 @@ function CreatePrompt() {
                     prompt: post.prompt,
                     userId: session?.user.id,
                     tag: post.tag
-                })
+                }),
             })
 
             if(response.ok) {
