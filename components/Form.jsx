@@ -26,9 +26,11 @@ function Form({ type,post,setPost,submitting,handleSubmit }) {
               prompt: e.target.value
             })}}
             placeholder="Write your prompt here"
+            required
             className="form_textarea"
           />
         </label>
+        
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag <span className="font-normal">(#product, #webdevelopement #idea)</span>

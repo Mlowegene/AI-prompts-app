@@ -5,7 +5,7 @@ export const POST = async (req) => {
     const {userId, prompt, tag} = await req.json();
 
     try {
-        connectToDB();
+        await connectToDB();
         const newPrompt = new Prompt({
             creator: userId,
             prompt,
@@ -19,3 +19,19 @@ export const POST = async (req) => {
         return new Response("Failed to create new prompt", {status: 500})
 } 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

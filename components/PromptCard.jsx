@@ -7,10 +7,10 @@ import { usePathname, useRouter } from "next/navigation";
 function PromptCard({ post, handleTagClick, handleEdit, handleDelete}) {
 
   const { data: session } = useSession();
-  const pathname = usePathname();
+  const pathName = usePathname();
   const router = useRouter();
 
-  const [copied, setCopied] = useState(''); 
+  const [copied, setCopied] = useState('');
 
   const handleCopy = () => {
       setCopied(post.prompt);
@@ -49,6 +49,7 @@ function PromptCard({ post, handleTagClick, handleEdit, handleDelete}) {
             }
             width={12}
             height={12}
+            alt="copy icon"
           />
         </div>
       </div>

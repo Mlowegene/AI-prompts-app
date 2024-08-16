@@ -7,9 +7,9 @@ export const GET = async (request, {params}) => {
     try {
         await connectToDB();
 
-        const prompts = await prompt.findById(params.id).populate('creator');
+        const prompts = await Prompt.findById(params.id).populate('creator');
 
-        if(!prompt)return new Response("prompt not found", {status: 404})
+        if(!prompts)return new Response("prompt not found", {status: 404})
 
         return new Response(JSON.stringify(prompt), {stattus: 200})
     } catch (error) {
@@ -22,7 +22,7 @@ export const GET = async (request, {params}) => {
 
         try {
             await connectToDB();
-            const existingPrompt = await Prompt.findBtId(params.id);
+            const existingPrompt = await Prompt.findById(params.id);
 
             if(!existingPrompt) return new Response("prompt not found", {status: 404})
 

@@ -46,9 +46,9 @@ function CreatePrompt() {
       post={post}
       setPost={setPost}
       submitting={submitting}
-    handleSubmit={createPrompt}
+      handleSubmit={createPrompt}
     />
   )
 }
 
-export default CreatePrompt
+export default CreatePrompt;
