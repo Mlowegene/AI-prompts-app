@@ -41,7 +41,7 @@ function PromptCard({ post, handleTagClick, handleEdit, handleDelete}) {
               </p>
            </div>
         </div>
-        <div className="copy_btn" onClick={() => {handleCopy}}>
+        <div className="copy_btn" onClick={() => handleCopy()}>
           <Image
             src={copied === post.prompt
               ? '/assets/icons/tick.svg'

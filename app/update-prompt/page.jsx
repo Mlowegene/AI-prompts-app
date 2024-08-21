@@ -40,7 +40,7 @@ function EditPrompt() {
 
         try {
             const response = await fetch(`/api/prompt/${promptId}`, {
-                method: 'PATCH ',
+                method: 'PATCH',
                 body: JSON.stringify({
                     prompt: post.prompt,
                     tag: post.tag
